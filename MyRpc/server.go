@@ -26,7 +26,7 @@ const MagicNumber = 0x3bef5c
 // 客户端固定采用 JSON 编码 Option，后续的 header 和 body 的编码方式由 Option 中的 CodeType 指定，
 // 服务端首先使用 JSON 解码 Option，然后通过 Option 的 CodeType 解码剩余的内容
 type Option struct {
-	MagicNumber    int           // MagicNumber marks this's a geerpc request
+	MagicNumber    int           // MagicNumber marks this's a MyRpc request
 	CodecType      codec.Type    // client may choose different Codec to encode body
 	ConnectTimeout time.Duration // 0 means no limit
 	HandleTimeout  time.Duration
